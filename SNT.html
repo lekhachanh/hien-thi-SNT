@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = parseInt(prompt("Bạn muốn in ra bao nhiêu số nguyên tố đầu tiên?"));
+    let count = 0;
+    for (let N = 2; count < numbers; N++) {
+        if(check_SoNguyenTo(N)) {
+            count++;
+            document.write(N +  ", ");
+        }
+    }
+    function check_SoNguyenTo(num) {
+        for(let N = 2; N < num - 1; N++) {
+            if(num % N === 0) {
+                return  false;
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
